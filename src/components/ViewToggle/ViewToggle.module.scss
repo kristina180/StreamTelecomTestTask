@@ -1,0 +1,23 @@
+.view-toggle {
+  gap: 8px;
+  display: none;
+
+  &__button {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  &__button--active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+
+  @media (min-width: 600px) {
+    display: flex;
+  }
+}

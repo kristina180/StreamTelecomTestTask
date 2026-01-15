@@ -1,0 +1,43 @@
+p {
+  margin: 0;
+}
+
+.user-item {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  text-align: center;
+
+  &--list {
+    @media (min-width: 600px) {
+      flex-direction: row;
+    }
+  }
+}
+
+.user-item__name {
+  font-weight: bold;
+  &--list {
+    @media (min-width: 600px) {
+      width: 40%;
+    }
+  }
+}
+
+.user-item__email,
+.user-item__phone,
+.empty {
+  font-size: 14px;
+  color: #555;
+
+  &--list {
+    @media (min-width: 600px) {
+      width: 30%;
+    }
+  }
+}

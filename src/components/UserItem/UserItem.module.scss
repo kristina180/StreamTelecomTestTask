@@ -9,23 +9,25 @@ p {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  gap: 6px;
+  gap: 12px;
   min-width: 0;
-  text-align: center;
+  text-align: left;
+  outline: none;
 
   &--list {
-    @media (min-width: 600px) {
-      flex-direction: row;
-    }
+    flex-direction: column;
+    gap: 8px;
   }
 }
 
 .user-item__name {
   font-weight: bold;
+  width: 100%;
+
   &--list {
-    @media (min-width: 600px) {
-      width: 40%;
-    }
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
   }
 }
 
@@ -34,10 +36,54 @@ p {
 .empty {
   font-size: 14px;
   color: #555;
+  width: 100%;
+}
 
-  &--list {
-    @media (min-width: 600px) {
-      width: 30%;
+.user-item__toggle {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0px;
+  transition: all 0.5s ease;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.user-item__toggle.active {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 600px) {
+  .user-item--list {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .user-item__name {
+    &--list {
+      width: 34%;
+    }
+  }
+
+  .user-item__email {
+    &--list {
+      width: 35%;
+    }
+  }
+
+  .user-item__phone {
+    &--list {
+      width: 29%;
     }
   }
 }
